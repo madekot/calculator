@@ -1,0 +1,94 @@
+@import "../../mixins";
+
+@include set-theme-calculator(1) {
+  .titleItems {
+    --color: white;
+  }
+
+  .toggle {
+    --toggle-background-color: #252d44;
+  }
+
+  .toggle:hover .toggleControl {
+    --toggleControl-background-color-hover: #fa6c58;
+  }
+
+  .toggleControl {
+    --toggleControl-background-color: #ce412d;
+  }
+}
+
+@include set-theme-calculator(2) {
+  .titleItems {
+    --color: #2f2f27;
+  }
+
+  .toggle {
+    --toggle-background-color: #d3cdcd;
+  }
+
+  .toggle:hover .toggleControl {
+    --toggleControl-background-color-hover: #f58e3f;
+  }
+
+  .toggleControl {
+    --toggleControl-background-color: #c95103;
+  }
+}
+
+@include set-theme-calculator(3) {
+  .titleItems {
+    --color: #ffe53c;
+  }
+
+  .toggle {
+    --toggle-background-color: #d3cdcd;
+  }
+
+  .toggle:hover .toggleControl {
+    --toggleControl-background-color-hover: #91fcf6;
+  }
+
+  .toggleControl {
+    --toggleControl-background-color: #07dbcf;
+  }
+}
+
+.switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.titleItems {
+  padding: 0 5px;
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  color: var(--color, white);
+  transition: color, 0.6s;
+}
+
+.toggle {
+  padding: 0 5px;
+  min-height: 30px;
+  min-width: 72px;
+  background-color: var(--toggle-background-color, #252d44);
+  border-radius: 20px;
+  transition: background-color 0.6s;
+
+  &:hover .toggleControl {
+    background-color: var(--toggleControl-background-color-hover, #d43d36);
+  }
+}
+
+.toggleControl {
+  transition: 0.6s;
+  transition-property: margin-left, background-color;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--toggleControl-background-color, #ce412d);
+}

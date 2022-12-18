@@ -1,0 +1,5 @@
+@mixin set-theme-calculator($themeNumber) {
+  body[data-theme-calc="#{$themeNumber}"] {
+    @content;
+  }
+}

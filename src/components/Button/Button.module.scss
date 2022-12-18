@@ -1,0 +1,50 @@
+@import "variant";
+
+.button {
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.6s;
+  transition-property: background-color, color, box-shadow;
+
+  &--size--l {
+    font-size: 25px;
+  }
+
+  &--size--m {
+    font-size: 35px;
+  }
+
+  &--theme--primary {
+    background-color: var(--primary-background-color, #eae3db);
+    color: var(--primary-color, #444d5c);
+    position: relative;
+    box-shadow: 0 5px 0 0 var(--primary-color-shadow);
+
+    &:hover {
+      background-color: var(--primary-background-color-hover, lighten(#eae3db, 10%));
+    }
+  }
+
+  &--theme--secondary {
+    background-color: var(--secondary-background-color, #647299);
+    color: var(--secondary-color, white);
+    position: relative;
+    box-shadow: 0 5px 0 0 var(--secondary-color-shadow);
+
+    &:hover {
+      background-color: var(--secondary-background-color-hover, lighten(#a2b3e1, 10%));
+    }
+  }
+
+  &--theme--accent {
+    background-color: var(--accent-background-color, #d13f30);
+    color: var(--accent-color, white);
+    position: relative;
+    box-shadow: 0 5px 0 0 var(--accent-color-shadow);
+
+    &:hover {
+      background-color: var(--accent-background-color-hover, lighten(#f96c5b, 10%));
+    }
+  }
+}

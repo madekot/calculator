@@ -1,0 +1,52 @@
+@import '../../mixins';
+
+@include set-theme-calculator(1) {
+  .box--theme--primary {
+    --primary-background-color: #181f32;
+  }
+
+  .box--theme--secondary {
+    --secondary-background-color: #252d44;
+  }
+}
+
+@include set-theme-calculator(2) {
+  .box {
+    --primary-background-color: #eeeeee;
+  }
+
+  .box--theme--secondary {
+    --secondary-background-color: #d3cdcd;
+  }
+}
+
+@include set-theme-calculator(3) {
+  .box {
+    --primary-background-color: #1e0836;
+  }
+
+  .box--theme--secondary {
+    --secondary-background-color: #1e0836;
+  }
+}
+
+.box {
+  border-radius: 5px;
+  transition: background-color 0.6s;
+
+  &--theme--primary {
+    background-color: var(--primary-background-color, #181f32);
+  }
+
+  &--theme--secondary {
+    background-color: var(--secondary-background-color, #252d44);
+  }
+
+  &--padding-size--m {
+    padding: 35px;
+  }
+
+  &--padding-size--s {
+    padding: 30px;
+  }
+}

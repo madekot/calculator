@@ -1,0 +1,32 @@
+@import '../../../mixins';
+
+@include set-theme-calculator(1) {
+  .value {
+    --color: white;
+  }
+}
+
+@include set-theme-calculator(2) {
+  .value {
+    --color: #3a3a2e;
+  }
+}
+
+@include set-theme-calculator(3) {
+  .value {
+    --color: #fade35;
+  }
+}
+
+.calcDisplay {
+  min-height: 128px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.value {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--color, white);
+  transition: color 0.6s;
+}

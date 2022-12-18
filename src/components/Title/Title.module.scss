@@ -1,0 +1,40 @@
+@import "../../mixins";
+
+@include set-theme-calculator(1) {
+  .title {
+    --color: white;
+  }
+}
+
+@include set-theme-calculator(2) {
+  .title {
+    --color: #2f2f27;
+  }
+}
+
+@include set-theme-calculator(3) {
+  .title {
+    --color: #ffe53c;
+  }
+}
+
+.title {
+  --color: white;
+
+  color: var(--color, white);
+  font-weight: bold;
+  transition: color 0.6s;
+
+  &--size--l {
+    font-size: 25px;
+  }
+
+  &--size--s {
+    font-size: 10px;
+  }
+
+  &--isUppercase {
+    text-transform: uppercase;
+  }
+}
+

@@ -1,0 +1,97 @@
+@import "../../mixins";
+
+@include set-theme-calculator(1) {
+  .button--theme--primary {
+    --primary-color: #444d5c;
+    --primary-background-color: #eae3db;
+    --primary-color-shadow: #afa4a2;
+
+    &:hover {
+      --primary-background-color-hover: #ffffff;
+  }
+}
+
+  .button--theme--secondary {
+    --secondary-color: white;
+    --secondary-background-color: #61729d;
+    --secondary-color-shadow: #414e71;
+
+    &:hover {
+      --secondary-background-color-hover: #a2b3e1;
+  }
+}
+
+  .button--theme--accent {
+    --accent-color: white;
+    --accent-background-color: #d13f30;
+    --accent-color-shadow: #8f2316;
+
+    &:hover {
+      --accent-background-color-hover: #f96c5b;
+    }
+  }
+}
+
+@include set-theme-calculator(2) {
+  .button--theme--primary {
+    --primary-color: #3a3a2e;
+    --primary-background-color: #e5e4e0;
+    --primary-color-shadow: #a69c92;
+
+    &:hover {
+      --primary-background-color-hover: #ffffff;
+  }
+}
+
+  .button--theme--secondary {
+    --secondary-color: white;
+    --secondary-background-color: #388187;
+    --secondary-color-shadow: #1a5f66;
+
+    &:hover {
+      --secondary-background-color-hover: #61b6bb;
+  }
+}
+
+  .button--theme--accent {
+    --accent-color: white;
+    --accent-background-color: #c85401;
+    --accent-color-shadow: #893a02;
+
+    &:hover {
+      --accent-background-color-hover: #ff8b38;
+    }
+  }
+}
+
+@include set-theme-calculator(3) {
+  .button--theme--primary {
+    --primary-color: #f4dc32;
+    --primary-background-color: #331b4d;
+    --primary-color-shadow: #792390;
+
+    &:hover {
+      --primary-background-color-hover: #6b34ac;
+  }
+}
+
+  .button--theme--secondary {
+    --secondary-color: white;
+    --secondary-background-color: #53097c;
+    --secondary-color-shadow: #aa26da;
+
+    &:hover {
+      --secondary-background-color-hover: #8631b0;
+  }
+}
+
+  .button--theme--accent {
+    --accent-color: #052e34;
+    --accent-background-color: #00decf;
+    --accent-color-shadow: #88ebf0;
+
+    &:hover {
+      --accent-background-color-hover: #94fff9;
+  }
+}
+}

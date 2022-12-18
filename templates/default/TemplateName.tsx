@@ -1,11 +1,15 @@
-import styles from './TemplateName.module.scss';
+import sty from './TemplateName.module.scss'
+import cn from 'classnames'
 
-interface TemplateNameProps {}
+interface TemplateNameProps {
+  className?: string
+}
 
-export const TemplateName = ({}: TemplateNameProps) => {
-    return (
-        <div className={styles.templateName}>
-            TemplateName Component
-        </div>
-    )
+export const TemplateName = ({className}: TemplateNameProps) => {
+  const classList = cn(sty.templateName, className)
+  return (
+    <div className={classList}>
+      TemplateName Component
+    </div>
+  )
 };
