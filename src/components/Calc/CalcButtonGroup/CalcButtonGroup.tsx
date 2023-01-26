@@ -1,6 +1,8 @@
 import sty from './CalcButtonGroup.module.scss'
 import cn from 'classnames'
 import {Button, ButtonProps} from "../../Button";
+import {useCalcContext} from "../CalcContext";
+
 
 export interface ControlData {
   title: string
@@ -17,6 +19,7 @@ interface CalcButtonGroupProps {
 }
 
 export const CalcButtonGroup = ({className, items}: CalcButtonGroupProps) => {
+  const {dispatch} = useCalcContext()
   if (!items?.length) return null
   const classList = cn(sty.calcButtonGroup, className)
   return (
@@ -30,6 +33,7 @@ export const CalcButtonGroup = ({className, items}: CalcButtonGroupProps) => {
               sty[`button--size--${item.sizeLength}`],
             )}
             {...item}
+            onClick={() => dispatch({type: item.type, payload: {title: item.title}})}
           />
         )
       })}

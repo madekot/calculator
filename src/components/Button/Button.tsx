@@ -6,9 +6,10 @@ export interface ButtonProps {
   title?: string
   size: 'l' | 'm'
   theme: 'primary' | 'secondary' | 'accent'
+  onClick?: () => void
 }
 
-export const Button = ({className, title, size, theme}: ButtonProps) => {
+export const Button = ({className, title, size, theme, onClick}: ButtonProps) => {
   const button = cn(
     sty.button,
     sty[`button--size--${size}`],
@@ -16,7 +17,7 @@ export const Button = ({className, title, size, theme}: ButtonProps) => {
     className
   )
   return (
-    <button className={button} type={"button"}>
+    <button className={button} type={"button"} onClick={onClick}>
       {title}
     </button>
   )
